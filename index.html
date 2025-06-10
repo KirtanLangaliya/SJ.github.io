@@ -46,7 +46,7 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/chudi.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                       <img src="Images/collection/chudi.jpeg" class="w-full h-full object-fill rounded-lg"/>
                     </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/earing_with_kansar.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/earing_with_kansar.jpeg" class="w-full h-full object-fill rounded-lg"/>
                     </div>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/set.jpg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/set.jpg" class="w-full h-full object-fill rounded-lg"/>
                         
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/haar.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/haar.jpeg" class="w-full h-full object-fill rounded-lg"/>
                       
@@ -104,7 +104,7 @@
                         
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/Mangalsutra.jpg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/Mangalsutra.jpg" class="w-full h-full object-fill rounded-lg"/>
                        
@@ -119,7 +119,7 @@
                         
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/chokar.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/chokar.jpeg" class="w-full h-full object-fill rounded-lg clickable-image"/>
                        
@@ -134,7 +134,7 @@
                         
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/Chaada.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                        <img src="Images/collection/Chaada.jpeg" class="w-full h-full object-fill rounded-lg"/>
                       
@@ -150,7 +150,7 @@
                         
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-src="Images/collection/Fancy Chaada.jpeg" onclick="openModalFromElement(this)">
                     <div class="h-76 bg-gray-100 relative flex items-center justify-center p-6">
                         <img src="Images/collection/Fancy Chaada.jpeg" class="w-full h-full object-fill rounded-lg"/>
                        
@@ -384,6 +384,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Shared Modal Overlay -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+        onclick="closeModal(event)">
+        <div class="bg-white p-4 rounded" onclick="event.stopPropagation()">
+            <img id="modal-img" src="" alt="Enlarged" class="max-w-full max-h-[80vh]" />
+        </div>
+    </div>
 
 
     <footer class="bg-gray-800 text-white py-12 ">
