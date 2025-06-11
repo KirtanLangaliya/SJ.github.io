@@ -78,3 +78,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function openModal(imageSrc) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+
+    modalImg.src = imageSrc;
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+}
+
+function closeModal(event) {
+    // Close the modal overlay
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+
+    modal.classList.add('opacity-0', 'pointer-events-none');
+
+
+    setTimeout(() => {
+        modalImg.src = '';
+    }, 300);
+}
+
+function openModalFromElement(el) {
+  openModal(el.getAttribute('data-src'));
+}
